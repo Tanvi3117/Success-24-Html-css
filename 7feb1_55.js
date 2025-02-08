@@ -68,5 +68,38 @@ console.log('abc789'.match(regex))*/
 // let reg=/\./
 // console.log(reg.test('to.oo'))
 // console.log(reg.test('toom'))
+//BRACKETS
+//1. matches any character inside bracket
+// let reg =/[his]/g
+// let string="this is kite"
+// console.log(reg.test(string))
+// console.log(string.match(reg))
+// //2. matches any character inside bracket
+// let reg =/[a-z]/g
+// let string="this is kite"
+// console.log(reg.test(string))
+// console.log(string.match(reg))
+// // //3. matches any character inside bracket
+// let reg =/[a-z 0-9]/
+// let string="th12is is ki00te"
+// console.log(reg.test(string))
+// console.log(string.match(reg))
+//4. not matches any character inside bracket
+// let reg =/[ ]/g
+// let string="th12is is ki00te"
+// console.log(reg.test(string))
+// console.log(string.match(reg).length)
 
+//5. matches n time
+// let reg =/is{2}/g
+// let string=" pis the his"
+// console.log(reg.test(string))
+// create a pattern for validate user name min=15 max=3, alphanumeric,not symbol if not means wrong user name, mix captial and small both
+// let username ="Tanak@123"
+// let res=/[a-z A-Z 0-9]{2,14}/g
+//     if (res.test(username)){
+//     console.log(username)
+// } else {
+//     console.log("Invalid User")
+// }
 
