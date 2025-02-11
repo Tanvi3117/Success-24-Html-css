@@ -1,0 +1,46 @@
+// categories of user define function
+// //1. Take nothing return nothing
+// function add()
+// {
+//     let n1=30;
+//     let n2=40
+//     let res=n1+n2
+//     console.log(`Result: ${res}`)
+
+// }add()
+
+
+// //2. Take nothing return something
+// function add1()
+// {
+//     let n1=30;
+//     let n2=40;
+//     let res=n1+n2
+//     return`Result: ${res}`
+
+// }
+// let data=add1()
+// console.log(data)
+// //3. Take something return nothing
+// function add1(a,b)
+// {
+//     let n1=a;
+//     let n2=b;
+//     let res=n1+n2
+//     console.log(`Result: ${res}`)
+
+// }
+// add1(40,45)
+
+// //4 Take something return something
+function add1(a,b)
+{
+    let n1=a;
+    let n2=b;
+    let res=n1+n2
+
+   return (`Result: ${res}`)
+
+}
+let data=add1(40,45)
+console.log(data)

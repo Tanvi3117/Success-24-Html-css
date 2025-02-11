@@ -1,0 +1,33 @@
+//create an object of student profile by taking data from user input.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        function test()
+        { console.log(this)}
+        test()
+    </script>
+    <script>
+        let student_obj={name: tanvi, show:function(){console.log(this)}}
+        student_obj.show()
+</script> -->
+<script>
+    function create_object(){
+        let my_arr=[]
+       for(i=1;i<=5;i++)
+       {
+        let k=prompt("key:")
+        let v=prompt('value:')
+        my_arr.push([k,v])
+    }
+    let obj=Object.fromEntries(my_arr)
+    console.log(obj)
+} create_object()
+</script>
+</body>
+</html>
