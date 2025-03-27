@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.mydiv
+{
+background-color: red;
+border-radius: 100%;
+width:200px;
+height:200px;
+transform:translate(0%,0%);
+
+}
+
+.rtc
+{
+background-color:green;
+border-radius: 100%;
+width:200px;
+height:200px;
+transition: 1s all;
+transform:translate(650%,0%)
+
+}   
+.rbc
+{
+background-color:blue;
+border-radius: 100%;
+width:200px;
+height:200px;
+transform:translate(650%,250%)
+}   
+.lbc
+{
+background-color:pink;
+border-radius: 100%;
+width:200px;
+height:200px;
+transform:translate(0%,250%)
+}   
+  
+.center
+{
+background-color: brown;
+border-radius: 100%;
+width:200px;
+height:200px;
+transition: 0.1s all;
+transform:translate(325%,125%)
+}
+
+</style>
+<body>
+
+<button onclick="rtc()">right top corner</button>
+<button onclick="center()">center</button>
+<button onclick="rbc()">right bottom corner</button>
+<button onclick="lbc()">left bottom corner</button>
+<div class="mydiv"></div>
+   <script>
+let mydiv=document.getElementsByClassName('mydiv')[0]
+
+let rtc=()=>
+{
+    mydiv.classList.remove('mydiv')
+    mydiv.classList.add('rtc')
+}
+
+let center=()=>
+{
+    mydiv.classList.remove("mydiv","rtc")
+    mydiv.classList.add("center")
+}
+let rbc=()=>
+{
+    mydiv.classList.remove("mydiv","rtc","center")
+    mydiv.classList.add("rbc")
+}
+let lbc=()=>
+{
+    mydiv.classList.remove("mydiv","rtc","center","rbc")
+    mydiv.classList.add("lbc")
+}
+
+
+   </script>
+      
+    
+        
+     
+
+</body>
+
+</html>

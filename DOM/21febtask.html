@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="get" type="text" placeholder="Enter String">
+    <button onclick="reverse()">Reverse</button>
+    <h3 id="set"></h3>
+</body>
+<script>
+      let set=document.getElementById("set") 
+    function reverse()
+    {
+        let data=document.getElementById("get").value
+        let rev=""
+for(let i=0;i<data.length;i++)
+{
+    rev=data[i]+rev
+ }
+        
+        set.innerHTML=rev
+        set.style.color="red"
+        set.style.backgroundColor="yellow"
+        
+        
+    }
+</script>
+</html>

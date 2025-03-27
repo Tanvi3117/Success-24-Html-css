@@ -1,0 +1,10 @@
+*{
+  padding: 0px;  
+}
+nav{
+    display: flex;
+}
+nav .menu ul li
+{ list-style: none;
+justify-content: space-around;
+background: linear-gradient(55deg,red, blue);}

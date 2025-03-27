@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  class: 
+     1. class is a group of data(properties/attributes)and features(methods/functionality)-
+     2. class sturcture is a blue print of an object
+     -->
+     <!-- <script>
+
+class Mobile
+{
+   name;
+   model;
+   ram;
+   storage;
+   price;
+   color;
+   calling()
+   {
+    document.write(this.name," is calling")
+   }
+    }
+    let mob1=new Mobile()
+    let mob2=new Mobile()
+    mob1.name="Samsung"
+     mob2.name="Vivo"
+    document.write(mob1.name)
+    document.write("<br>")
+    document.write(mob2.name)
+    document.write("<br>")
+    mob1.calling();
+     </script> -->
+     <!-- ...................using this keyword....... -->
+     <!-- <script>
+        class Mobile
+{ 
+    setdata(name,model,ram,storage,price,color){
+    this.name=name;
+   this.model=model;
+   this.ram=ram;
+   this.storage=storage;
+   this.price=price;
+   this.color=color;
+
+}
+   
+   calling()
+   {
+    document.write(this.name," is calling")
+   }
+   details()
+   {
+    document.write(`Name:${this.name} <br>Model :${this.model}<br> ram:${this.ram} <br>storage:${this.storage} <br>price:${this.price} <br>color:${this.color}`)
+   }
+    }
+    let mob1=new Mobile()
+    mob1.setdata("vivo","2025","8 gb","128gb","12000","purple")
+    mob1.details();
+     </script> -->
+     <script>
+class mobile{
+    constructor(name,price)
+    {
+        console.log("No need to call me explictly bacause i am automatic")
+        this.name=name;
+        this.price=price;
+    }
+}
+let m1=new mobile("vivo","12000")
+document.write(m1.name)
+
+     </script>
+</body>
+</html>

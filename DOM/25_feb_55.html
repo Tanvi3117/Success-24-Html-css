@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Manager{
+            constructor(name,age,salary)
+            {
+               this.name=name;
+               this.age=age;
+               this.salary=salary;
+            }
+            show()
+            {   console.log("Hi everyone, I am function")
+                return `${this.name} ${this.age} ${this.salary} `
+            }
+        }
+            class employee extends Manager{
+            constructor({name,age,salary,profile,status,time})
+            {
+               super(name,age,salary);
+               this.profile=profile
+               this.status=status
+               this.time=time
+            }
+            introduce()
+            {
+               return `${super.show()} ${this.profile} ${this.status} ${this.time}`
+            }
+                
+            }
+            
+          
+        let emp1=new employee({profile: "Software Developer",name:"Dev",age:"24",salary:"7000",status:"working", time: new Date().toTimeString()})
+        console.log(emp1.introduce());
+            
+    </script>
+</body>
+</html>

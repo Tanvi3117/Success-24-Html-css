@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Cards</title>
+  <style>
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      padding: 15px;
+      width: 250px;
+      border-radius: 8px;
+    }
+
+    .card img {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Five User Post Cards</h1>
+  <div id="cards" class="card-container"></div>
+  <script>
+    function createCard(user, post, comment, photo) {
+      let card = document.createElement('div');
+      card.classList.add('card');
+      card.innerHTML = `
+        <h3>${user.name}</h3>
+        <p>Email: ${user.email}</p>
+        <p>City: ${user.address.city}</p>
+        <h4>${post.title}</h4>
+        <p>${post.body}</p>
+        <p>Comment: ${comment.body}</p>
+        <img src="${photo.picture.large}" alt="Photo">
+    `;
+      return card;
+    }
+
+    function fetchData() {
+      let usersEndpoint = 'https://jsonplaceholder.typicode.com/users';
+      let postsEndpoint = 'https://jsonplaceholder.typicode.com/posts';
+      let commentsEndpoint = 'https://jsonplaceholder.typicode.com/comments';
+      let photosEndpoint = 'https://randomuser.me/api/?results=5';
+      let cardsContainer = document.getElementById('cards');
+      let xhrUsers = new XMLHttpRequest();
+      xhrUsers.open('GET', usersEndpoint, true);
+      xhrUsers.onload = function () {
+        if (xhrUsers.status === 200) {
+          let users = JSON.parse(xhrUsers.responseText);
+
+          let xhrPosts = new XMLHttpRequest();
+          xhrPosts.open('GET', postsEndpoint, true);
+          xhrPosts.onload = function () {
+            if (xhrPosts.status === 200) {
+              let posts = JSON.parse(xhrPosts.responseText);
+
+              let xhrComments = new XMLHttpRequest();
+              xhrComments.open('GET', commentsEndpoint, true);
+              xhrComments.onload = function () {
+                if (xhrComments.status === 200) {
+                  let comments = JSON.parse(xhrComments.responseText);
+
+                  let xhrPhotos = new XMLHttpRequest();
+                  xhrPhotos.open('GET', photosEndpoint, true);
+                  xhrPhotos.onload = function () {
+                    if (xhrPhotos.status === 200) {
+                      let photos = JSON.parse(xhrPhotos.responseText);
+                    
+                     
+                     
+                      for (let i = 0; i < 5; i++) {
+                      
+                        let photo=photos.results[i]
+                      
+            
+                        let user = users[i];
+                        let post = posts.find(p => p.userId === user.id);
+                        let comment = comments.find(c => c.postId === post.id);
+            
+                        let card = createCard(user, post, comment, photo);
+                        cardsContainer.appendChild(card);
+                      }
+                      
+                    }
+                  };
+                  xhrPhotos.send();
+                }
+              };
+              xhrComments.send();
+            }
+          };
+          xhrPosts.send();
+        }
+      };
+      xhrUsers.send();
+    }
+
+    fetchData();
+  </script>
+</body>
+
+</html>

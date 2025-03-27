@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USer Profile</title>
+</head>
+<style>
+#set{
+    display: flex;
+    justify-content: space-around;
+}
+#c-1{
+    border:2px solid;
+    padding: 20px;
+}
+
+</style>
+<body>
+   
+    <div id="set"></div>
+       
+         <script>
+        class profilecard
+{ 
+    constructor(image,name,age,mobile){
+    this.image=image;
+    this.name=name;
+   this.age=age;
+   this.mobile=mobile;
+  
+
+}
+details()
+{   let i=document.createElement("image")
+i.src=`${this.image}`
+    let data=`<image src="${i.src}" width="100px"> <br>Name: ${this.name}<br>Age: ${this.age} <br>Mobile: ${this.mobile}`
+    return data;
+}
+   
+
+   
+}
+
+let set=document.getElementById("set")
+let profile1=new profilecard("r1.jpeg","John","40","8744994484")
+let profile2=new profilecard("r2.jpeg","Ajay","45","8899944444")
+let profile3=new profilecard("r3.jpeg","Sonia","34","8002294484")
+
+let arr=[profile1,profile2,profile3]
+for(let i=0;i<arr.length;i++)
+{ set.innerHTML+=`<div id="c-1">${arr[i].details()}</div>`
+
+}
+
+    
+
+      </script>
+</body>
+</html>

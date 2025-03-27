@@ -6,16 +6,16 @@
 // // // index not allowed in object
 // // //.........2.creation
 // // // using {}
-// let stu_profile ={name :"Tanvi",age:26,rollno:5808, clg_name:"Manipal University", Mobile :8147064139, subject:['cs','maths','dl','communication'], address:'Noida delhi 110021',marks:[45,89,90,78],Say_hello:function()
-//     {return `Student Name:${this.name}`}
-// }
+let stu_profile ={name :"Tanvi",age:26,rollno:5808, clg_name:"Manipal University", Mobile :8147064139, subject:['cs','maths','dl','communication'], address:'Noida delhi 110021',marks:[45,89,90,78],Say_hello:function()
+    {return `Student Name:${this.name}`}
+}
 // console.log(stu_profile)
 // // // using new keyword
-// // let stu1_profile= new Object()
-// // stu1_profile.name="aman"
-// // stu1_profile.age=34
-// // stu1_profile.email="aman@gmail.com"
-// // console.log(stu1_profile)
+// let stu1_profile= new Object()
+// stu1_profile.name="aman"
+// stu1_profile.age=34
+// stu1_profile.email="aman@gmail.com"
+// console.log(stu1_profile)
 // //................... accessing of object
 // // console.log(stu_profile.Say_hello())
 // // for(let i=0; i<stu_profile.marks.length;i++)
@@ -24,41 +24,41 @@
 
 // //stu_profile.clg_code="clg-123"
 
-// // console.log(stu_profile)
-// // Object.freeze(stu_profile)
-// // stu_profile.clg_name="LPU"
-// // console.log(stu_profile)
+// console.log(stu_profile)
+// Object.freeze(stu_profile)
+// stu_profile.clg_name="LPU"
+// console.log(stu_profile)
 // // let emp_profile ={name:"Tanvi",age:32,salary:60000,designation : "software developer", city :"noida", Hello:function() {return`Employee Salary : ${this.salary}`} }
 // // console.log(emp_profile)
 // // function test()
 // //         { console.log(this)}
 // //         test()
 // // console.log(stu_profile)
-// // Object.seal(stu_profile) // can update old data nut cannot add
-// // stu_profile.clg_name="LPU"
-// // stu_profile_gender="female"
-// // console.log(stu_profile)
-// // show keys of object
-// // let key = Object.keys(stu_profile)
+// Object.seal(stu_profile) // can update old data nut cannot add
+// stu_profile.clg_name="LPU"
+// stu_profilegender="female"
+// console.log(stu_profile)
+// // // show keys of object
+// let key = Object.keys(stu_profile)
 // // console.log(key)
-// // let value = Object.values(stu_profile)
-// // console.log(value)
+// let value = Object.values(stu_profile)
+// console.log(value)
 // // // new entries
-// // let data = [["name","ajay"],['age','45']]
-// // let obj=Object.fromEntries(data)
-// // console.log(data)
+// let data = [["name","ajay"],['age','45']]
+// let obj=Object.fromEntries(data)
+// console.log(obj)
 // // // ..............traversing
 
-// // let key = Object.keys(stu_profile)
-// // for(let i of key)
-// // {console.log(i)}
+// let key = Object.keys(stu_profile)
+// for(let i of key)
+// {console.log(i)}
 
-// // let data = Object.values(stu_profile)
-// // for(let i of data)
-// // {console.log(i)}
+// let data = Object.values(stu_profile)
+// for(let i of data)
+// {console.log(i)}
 // // // enteries (key with value)
-// // let data1 = Object.entries(stu_profile)
-// // console.log(data1)
+// let data1 = Object.entries(stu_profile)
+// console.log(data1)
 // // //.... or 
 // // for (let[v,k] of [data,key])
 // // {console.log(v,k)}
@@ -71,19 +71,19 @@ let student_profile ={name :"Tanvi",age:26,rollno:5808, clg_name:"Manipal Univer
 }
 // Object.defineProperty(stu_profile,'name',{writable:false}) // restricting praticular data of object
 //     console.log(stu_profile)
-//     stu_profile.name="ankit"
-//     console.log(stu_profile)
+    // stu_profile.name="ankit"
+    // console.log(stu_profile)
 
-//     let obj1={name:'aman'}
-//     let obj2={age:40, roll:9869}
-//     Object.assign(obj1,obj2)
-//     console.log(obj1)
-    //....prototypes
+    // let obj1={name:'aman'}
+    // let obj2={age:40, roll:9869}
+    // Object.assign(obj1,obj2)
+    // console.log(obj1)
+//     // ....prototypes
     // let person_prototype={
     //     namaste(){
     //         return `Namaste ${this.name}`
     //     }
-    // // }
+    // }
     // let Person1=Object.create(person_prototype)
     // Person1.name="Tanvi"
     // console.log(Person1.namaste())
@@ -95,7 +95,7 @@ let student_profile ={name :"Tanvi",age:26,rollno:5808, clg_name:"Manipal Univer
     // console.log(Person3.namaste())
 
 
-    // function outer\(lexical scope : It means that a fuction remembers the variables and function from the place it was define(parent scope) not from where it is called)
+//     // function outer(lexical scope : It means that a fuction remembers the variables and function from the place it was define(parent scope) not from where it is called)
 //     function outer()
     
 //     {let name1="Abhay"

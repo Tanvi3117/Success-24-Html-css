@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="start()">START</button>
+    <button onclick="stop()">STOP</button>
+    <script>
+        var my;
+        function start()
+        {
+let my= setTimeout(function(){
+    document.write("I love my India")}, 5000)
+}
+        
+        function stop()
+        {
+clearTimeout(my);
+alert("Timeout Stopped");
+        }
+        
+    </script>
+    
+</body>
+</html>

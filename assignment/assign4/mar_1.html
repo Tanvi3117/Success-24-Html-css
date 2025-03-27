@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div ></div><p id="text">This chapter provides some longer examples of web and XML development using the DOM. Wherever possible, the examples use common APIs, tricks, and patterns in JavaScript for manipulating the document object.</p></div>
+ <button id="upper1">Upper case</button>
+ <button id="lower1">lower case</button>
+ <button id="word1">words</button>
+ <div id="set"></div>
+ <div id="set1"></div>
+ <div id="set2"></div>
+ <script>
+    let data=document.getElementById("text")
+function Upper()
+{
+    
+  
+ let x =data.innerHTML.match(/[A-Z]/g).length
+ set.innerHTML=x
+}
+ function lower()
+ {
+    let y=data.innerHTML.match(/[a-z]/g).length
+    set1.innerHTML=y
+ }
+ function word()
+ {
+    let w=data.innerHTML.match(/b/w+/b/g).length
+    set2.innerHTML=w
+ }
+ 
+ upper1.addEventListener("click",Upper)
+ lower1.addEventListener("click",lower)
+ word1.addEventListener("click",word)
+
+ </script>
+</body>
+</html>

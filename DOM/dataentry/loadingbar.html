@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: grid;
+        place-items: center;
+    }
+    .container{
+        height: 30px;
+        width: 400px;
+        background-color: rgb(185, 167, 170);
+        border-radius: 20px;
+    }
+    .progressbar
+    {
+         color: blue;
+         height: 100%;
+         width: 0;
+         place-items: center;
+         display: grid;
+         border-radius: 20px;
+         transition: .5s ease;
+
+    }
+
+    
+</style> 
+<body>
+<div class="container">
+    <div class="progressbar"></div>
+    <button>click_me</button>
+
+</div>
+
+</body>
+</html>

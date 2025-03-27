@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="h1_tag"></div>
+    <script>
+             let number = prompt("how many times to display:")
+             let text = prompt("content name")
+              //number=parseInt(number)
+              for(let i=0;i<number;i++)
+              {
+               let nb=document.createElement(`${text}`)
+                nb.innerHTML=(`${text}<br>`)
+                document.getElementById("h1_tag").append(nb)
+              
+              }
+        
+       </script>
+</body>
+</html>

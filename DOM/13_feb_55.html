@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Employee list</h1>
+        <div class="stu_name">
+            <label for="">Student name</label>
+            <input id="stu_name" type="text" placeholder="Student name">
+        </div>
+        <div class="stu_age">
+            <label for="">Student name</label>
+            <input id="stu_age" type="" placeholder="Student age">
+        </div>
+       
+        <button id="btn"; onclick="get_data()">fetch data</button>
+        <div><h3 id="set"></h3></div>
+    </div>
+
+    <script>
+        let btn =document.getElementById("btn")
+
+        function get_data()
+    
+    {let stu_name=document.getElementById("stu_name").value;
+        let stu_age=document.getElementById("stu_age").value;
+        set.innerHTML=(`${stu_name} ${stu_age}`)
+    }
+    btn.addEventListener("click",get_data)
+
+         
+
+    </script>
+</body>
+</html>

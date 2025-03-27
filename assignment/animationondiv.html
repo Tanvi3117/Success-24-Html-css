@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="animationondiv.css">
+</head>
+<style>
+    #main{
+      
+        background-color: red;
+        animation-name: circle;
+        border-radius :100%;
+        transition: 1s all;
+    }
+    
+</style>
+<body>
+
+
+<button onclick="click_me()">click me</button>
+
+ <div id="main"
+ ></div>
+
+
+   
+ <script>
+    let count=document.getElementById('count')
+    let main =document.getElementById('main')
+    let c=0;
+    function click_me(){
+        c+=1
+        count.innerText=c;
+       main.style.width=`${c*2}%`
+        main.style.height=`${c}px`
+
+    }
+    
+</script>
+</body>
+</html>

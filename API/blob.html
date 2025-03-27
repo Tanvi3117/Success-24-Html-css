@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let data = ["hello", "hi", "bye"]
+        let blob = new Blob([data], { type: 'text/plain' })
+        let link = document.createElement("a")
+        link.href = URL.createObjectURL(blob)
+        link.download = "hi.txt"
+        link.innerHTML = "Download_Now"
+        document.body.appendChild(link)
+        console.log(blob)
+        console.log(link)
+        document.write(data)
+    </script>
+</body>
+
+</html>

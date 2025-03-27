@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// let num=Number(prompt("enter your numbers:"))
+// if(num>=90 && num<=100)
+// {
+// document.write("GRADE-A")
+// }else if(num>=70 && num<=89)
+// {
+//     document.write("GRADE-B")
+// }else if(num>=60 && num<=69)
+// {
+//     document.write("GRADE-C")
+// }else if(num>=50 && num<=59)
+// {
+//     document.write("GRADE-D")
+// }else{
+//     document.write("FAIL")
+// }
+// let gn=25
+// let num=Number(prompt("guess the game number"))
+// while(num!=gn)
+// {
+//     let num=Number(prompt("guess again"))
+// }
+
+// console.log("Congratulations your number is right")
+let n=Number(prompt("enter your number"))
+let arr=[];
+for(let i=0;i<n;i++)
+{
+    arr[i]=i+1
+}
+let factorial=arr.reduce((res,cur)=>{
+    return res*cur
+})
+document.write(factorial);
+     </script>
+ </body>
+ </html>

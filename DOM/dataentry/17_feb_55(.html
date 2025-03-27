@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- event listener is a java script- inbuilt method which waits any action by user from browser
+    Syntax : elementname.addeventlistener("event", claackback,extra) -->
+     <!-- adding event listener -->
+      <!-- <button id="e1">Click Me</button>
+      <div id="set"></div>
+     
+      <script>
+        let el=document.getElementById("e1")
+        let set=document.getElementById("set")
+        function add(a,b)
+        { 
+set.innerHTML+=`Additon ${a+b} <br>`
+        }
+        function sub(a,b)
+        { 
+set.innerHTML+=`substraction ${a-b} <br>`
+        }
+        el.addEventListener("click",()=>add(12,13))
+        el.addEventListener("keypress",()=>sub(20,17),{once:true})
+      </script> -->
+
+
+<!-- removing eventlistener -->
+ <!-- <button id="Pay_Now">Pay_Now</button>
+ <button id="reset_Pay_now">Reset Pay Now</button>
+ <h1 id="set"></h1>
+ <script>
+   let btn=document.getElementById("Pay_Now")
+   let set=document.getElementById("set")
+function payment_handle()
+{  set.innerHTML=("payment processing")
+btn.disabled=true
+btn.style.cursor="not-allowed"
+ document.getElementById("Pay_Now").removeEventListener("click", payment_handle)
+  
+}
+function reset_payment()
+{
+set.innerHTML=("payment reset")
+btn.disabled=false
+btn.style.cursor="pointer"
+ document.getElementById("Pay_Now").addEventListener("click", payment_handle)
+}
+document.getElementById("Pay_Now").addEventListener("click",payment_handle)
+document.getElementById("reset_Pay_now").addEventListener("click",reset_payment) -->
+ <!-- </script> -->
+
+ <!-- oninput event -->
+  <input oninput="type_me()" type="text" placeholder="type Something" id="get">
+  <h3 id="set"></h3>
+  <script>
+let set=document.getElementById("set")
+function type_me()
+{
+    let data=document.getElementById("get").value
+    set.innerHTML=data
+}
+
+  </script>
+</body>
+</html>

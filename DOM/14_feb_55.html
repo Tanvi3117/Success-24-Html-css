@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="get_date"></h1>
+    <script>
+        let get_date=document.getElementById("get_date")
+        let date=new Date()
+        // let data =new Date(2070,1,15,12,20,30)// custom date
+        //get_date.innerText=date.toLocaleDateString()
+        // get_date.innerText=date.toLocaleTimeString()
+        // get_date.innerText=date.toLocaleString()
+        // get_date.innerText=date.getDate()
+        // get_date.innerText=date.getHours()
+        // get_date.innerText=date.getSeconds()
+        // get_date.innerText=date.getMinutes()
+        // get_date.innerText=date.getFullYear()
+        let formate=date.toLocaleString("en-US",{weekday:"long",year:"numeric",month:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",timeZoneName:"long"})
+        
+         get_date.innerText=formate
+    </script>
+</body>
+</html>

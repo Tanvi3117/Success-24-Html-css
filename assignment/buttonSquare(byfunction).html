@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   /* span{
+    /* display:inline-flex; */
+    /* margin-left: 50px;
+     */
+   
+button{
+    display: block;
+ 
+    }
+</style>
+
+<body>
+    <div class="con" id="btn-con"></div>
+  
+<script>
+    let arr=[12,14,16,17,18,7];
+    let btn_con =document.getElementById("btn-con")
+    arr.forEach((num)=>{
+        let btn =document.createElement("button")
+        btn.innerHTML=(`Data ${num}`)
+        btn_con.appendChild(btn)
+        let spn=document.createElement("span")
+        btn.onclick=()=>setTimeout(spn.innerHTML=num**2,5000)
+        let my= setTimeout(btn.onclick=()=>(spn.innerHTML=num**2), 1000)
+        
+        btn_con.append(spn)
+    })
+
+
+
+</script>
+
+</body>
+</html>

@@ -37,7 +37,7 @@ let multiplication =(n1,n2)=>{
 let division =(n1,n2)=>{ 
                 return n1/n2}   
 
-   let input ="5";
+   let input ="3";
 switch(input){
     case"1":
     console.log(Addition(n1,n2))

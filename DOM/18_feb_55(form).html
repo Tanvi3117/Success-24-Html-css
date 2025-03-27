@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   div {
+margin-top: 30px;
+    }
+    input[type="text"]{
+        padding: 10px;
+        width: 80%;
+    }
+    input[type="date"]{
+        padding: 10px;
+        width: 80%;
+    }
+    input[type="password"]{
+        padding: 10px;
+        width: 80%;
+    }
+
+</style>
+<body>
+    
+    <form action="" id="myform">
+        <fieldset style="width:80%">
+            <legend>Student registration</legend>
+       
+        <div>
+        <label for="">Student Name</label>
+        <input type="text" placeholder="Enter student Name" id="st_name">
+    </div>
+    <div>
+        <label for="">Password</label>
+        <input type="password" placeholder="Enter student Password" id="st_pass"></div> <div>
+        <label for="">Student DOB</label>
+        <input type="date"></div> <div>
+        <label for="">Student gender</label>
+        Male:<input type="radio" name="gender">
+        female:<input type="radio"name="gender"></div> <div>
+        <label for="">Student subject</label>
+        Math:<input type="checkbox">  
+        Computer:<input type="checkbox"></div> <div>
+        <label for="">Student Class</label>
+        <select name="" id="">
+            <option value="10th">10th</option>
+            <option value="11th">11th</option>
+            <option value="9th">9th</option>
+            <option value="12th">12th</option>
+        </select>
+    </div>
+    <br>
+    <!-- <button onclick="fetchdata(event)" type="submit">Submit</button> -->
+    <button type="submit">Submit</button> 
+</fieldset>
+
+   
+    </form>
+    <script>
+    //    function fetchdata(event)
+    //    {
+    //     event.preventDefault()
+    //     let st_name=document.getElementById("st_name").value
+    //     let st_pass=document.getElementById("st_pass").value
+    //     console.log(st_name)
+    //     console.log(st_pass)
+    //    }
+   
+        document.getElementById("myform").addEventListener("submit",function(event)
+{event.preventDefault()
+        let st_name=document.getElementById("st_name").value;
+        let st_pass=document.getElementById("st_pass").value;
+        console.log(st_name)
+        console.log(st_pass)
+        document.getElementById("myform").reset()
+
+})
+    
+    
+    </script>
+</body>
+</html>

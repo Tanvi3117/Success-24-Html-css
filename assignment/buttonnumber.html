@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    .con{
+  
+  display: block;
+  margin-top: 20px;
+  
+ 
+    }
+</style>
+<body>
+    <div clas="con" id="button-container"></div>
+        <div id="set"></div>
+        <br>
+        <div id="set1"></div>
+<script>
+    let arr=[12,14,16,17,18,7];
+    let set=document.getElementById("set")
+    let set1=document.getElementById("set1")
+    for(let i=0;i<arr.length;i++)
+{
+    let btn =document.createElement("button")
+    btn.innerHTML=(`${arr[i]}`)
+    btn.style.backgroundColor="grey"
+    document.getElementById("button-container").append(btn)
+  
+   
+    btn.addEventListener("click",()=>{
+        set.innerText=(`${arr[i]**2}`)
+        set.style.color="blue"
+        
+    })
+    btn.addEventListener("mouseover",()=>{
+        set1.innerText=(`${arr[i]**3}`)
+        set1.style.color="red"
+    })
+    
+
+}
+
+</script>
+
+    
+</body>
+</html>

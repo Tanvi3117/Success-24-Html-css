@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button Program</title>
+</head>
+<body>
+    
+    <div id="button-container"></div>
+    <script>
+             let number = prompt("enter the number to display:")
+              //number=parseInt(number)
+              for(let i=0;i<number;i++)
+              {
+                let nb=document.createElement("button")
+                nb.innerHTML="Button"
+                document.getElementById("button-container").append(nb)
+              }
+        
+       </script>
+    
+
+</body>
+</html>

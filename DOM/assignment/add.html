@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="first_num">
+            <label for="">First Number</label>
+            <input id="first_num" type="number" placeholder="First Number">
+        </div>
+        <div class="Second_num">
+            <label for="">Second Number</label>
+            <input id="Second_num" type="number" placeholder="Second Number">
+        </div>
+       
+        <button onclick="get_data()">fetch data</button>
+        <div><h3 id="set"></h3></div> 
+    </div>
+
+<script>
+
+    function get_data()
+    {   let set=document.getElementById('set')
+        let first_num=document.getElementById("first_num").value;
+        let Second_num=document.getElementById("Second_num").value;
+    
+     set.innerHTML=("first_num"+"Second_num")
+    } 
+
+</script>
+</body>
+</html>

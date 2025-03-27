@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
+</head>
+<style>
+    .main{
+        width: 40px;
+        border: 300px;
+        margin: 50px auto;
+    }
+    .main button{
+       background-color: red;
+       border-radius: 10px;
+       width: 100px;
+       padding:auto;
+    }
+.main set
+    {
+        margin-left: 100px;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<div class="main">
+
+<div id="set"> </div>
+<button id="btn">Fetch_Profile</button>
+<p id="load_content"></p>
+</div>
+
+<body>
+    <!-- XMLHTTPREQUEST -xhr
+    fetch()
+    async awaits-promises -->
+    <script>
+        let user=document.querySelector(".container")
+        let btn=document.querySelector("#btn");
+        let fact=document.querySelector('#set')
+        let load_content=document.getElementById("load_content")
+        
+       
+        btn.addEventListener('click',()=>{
+            btn.disabled=true;
+            load_content.innerText="Fetching Data Please wait..."
+        function fetch_data(callback){
+            
+            let xhr=new XMLHttpRequest()
+            xhr.open("GET","https://randomuser.me/api");
+            xhr.onload=function(){
+                if(xhr.status==200)
+            {
+                callback(false,JSON.parse(xhr.responseText))
+
+            }
+            else{
+                callback("Error in fetch data")
+            }
+                
+            }
+            xhr.send()
+        }
+
+        fetch_data((error,data)=>{
+            if(error){
+                console.log(error)
+            }
+            else{
+               console.log(data);
+                let user_data=data.results[0]
+                console.log(user_data)
+                console.log(user_data.picture)
+                console.log(user_data.name.first,user_data.name.last)
+                console.log(user_data.email)
+               
+                
+                // let blob = new Blob([JSON.stringify(user_data)], { type: 'text/plain' })
+        //         let link = document.createElement("a")
+        // link.href = URL.createObjectURL(blob)
+        // link.download = "hi.txt"
+        // link.innerHTML="Download_Now"
+        // document.body.appendChild(link)
+
+fact.innerHTML=`<div class="card" class="mx-auto p-2" style="width: 18rem;">
+  <img src="${user_data.picture.large}" class="card-img-top" alt="..." 'width:100%''>
+  <div class="card-body">
+    <h5 class="card-title">Name ${user_data.name.first} ${user_data.name.last}</h5>
+    <p class="card-text">${user_data.email}</p>
+    <h6>${user_data.location.country}</h6>
+     <h6>${user_data.phone}</h6>
+      <h6>${user_data.dob.age}</h6>
+   </div>
+</div>`
+
+
+            }
+            load_content.innerText=""
+            setTimeout(()=>{
+                btn.disabled=false;
+            },1000)
+        })
+        })
+
+    </script>
+</body>
+</html>

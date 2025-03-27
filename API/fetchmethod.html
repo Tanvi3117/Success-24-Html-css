@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div id="root"></div>
+
+<body>
+    <script>
+        
+        fetch("https://randomuser.me/api")
+        .then(response=>response.json())
+        .then(data=>{ 
+                   console.log(data);
+                let user_data=data.results[0]
+                content =`<div class="card"  style="width: 18rem;">
+  <img src="${user_data.picture.large}" alt="..." 'width:100%''>
+  <div class="card-body">
+    <h5 class="card-title">Name:  ${user_data.name.first} ${user_data.name.last}</h5>
+    <p class="card-text"> Email: ${user_data.email}</p>
+    <h6> Country:${user_data.location.country}</h6>
+     <h6>Phone: ${user_data.phone}</h6>
+      <h6>Age:${user_data.dob.age}</h6>
+   </div>
+</div>`
+document.getElementById('root').innerHTML=content
+}
+        )
+        .catch(err=>{
+            console.log("Something Went Wrong", err)
+        })
+        .finally(()=>{
+            console.log("resource closed")
+        })
+
+    </script>
+</body>
+</html>
